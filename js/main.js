@@ -1182,23 +1182,7 @@ window.Riode = {};
         }
     }
 
-	/**
-	 * @function initPurchasedMinipopup
-	 */
-    Riode.initPurchasedMinipopup = function () {
-        setInterval( function () {
-            Riode.Minipopup.open( {
-                message: 'Someone Purchased',
-                productClass: 'product-cart',
-                name: 'Daisy Shoes Sonia by Sonia-Blue',
-                nameLink: 'product.html',
-                imageSrc: 'images/cart/product-1.jpg',
-                isPurchased: true
-            }, function ( $box ) {
-                Riode.ratingTooltip( $box[ 0 ] );
-            } );
-        }, 60000 );
-    }
+
 
 	/**
 	 * @function initScrollTopButton
@@ -3046,7 +3030,7 @@ window.Riode = {};
         Riode.initZoom();                                                       // Initialize zoom
         Riode.initNavFilter( '.nav-filters .nav-filter' );                      // Initialize navigation filters for blog, products
         Riode.initPopups();                                                     // Initialize popups: login, register, play video, newsletter popup
-        Riode.initPurchasedMinipopup();                                         // Initialize minipopup for purchased event
+    
         Riode.initScrollTopButton();                                            // Initialize scroll top button.
         Riode.floatSVG( '.float-svg' );						                    // Floating SVG
         Riode.initShowVendorSearch( '.toolbox .form-toggle-btn' );              // Initialize show vendor search form
