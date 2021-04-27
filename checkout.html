@@ -37,6 +37,7 @@
 	<!-- Main CSS File -->
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 	<link rel="stylesheet" type="text/css" href="css/demo24.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 
 <body>
@@ -53,7 +54,7 @@
 							<div class="header-search hs-simple d-lg-show" style="max-width: 300px;">
 								<form action="#" class="input-wrapper">
 									<input type="text" class="form-control" name="search" autocomplete="off" placeholder="Search..."
-										required />
+										required style="border-radius: 25px;"/>
 									<button class="btn btn-search" type="submit">
 										<i class="d-icon-search"></i>
 									</button>
@@ -596,8 +597,9 @@
 					<div class="card accordion">
 						<div class="alert alert-light alert-primary alert-icon mb-4 card-header">
 							<i class="fas fa-exclamation-circle"></i>
-							<span class="text-body">Returning customer?</span>
+						
 							<a href="#alert-body1" class="text-primary collapse">Click here to login</a>
+							<span style="font-weight: bold;">OR </span><span class="text-body">Continue as guest</span>
 						</div>
 						<div class="alert-body collapsed" id="alert-body1"> 
 							<p>If you have shopped with us before, please enter your details below. 
@@ -632,21 +634,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="card accordion">
-						<div class="alert alert-light alert-primary alert-icon mb-4 card-header">
-							<i class="fas fa-exclamation-circle"></i>
-							<span class="text-body">Have a coupon?</span>
-							<a href="#alert-body2" class="text-primary">Click here to enter your code</a>
-						</div>
-						<div class="alert-body mb-4 collapsed" id="alert-body2">
-							<p>If you have a coupon code, please apply it below.</p>
-							<div class="check-coupon-box d-flex">
-								<input type="text" name="coupon_code" class="input-text form-control text-grey ls-m mr-4"
-									id="coupon_code" value="" placeholder="Coupon code">
-								<button type="submit" class="btn btn-dark btn-rounded btn-outline">Apply Coupon</button>
-							</div>
-						</div>
-					</div>
+					
 					<form action="#" class="form">
 						<div class="row">
 							<div class="col-lg-7 mb-6 mb-lg-0 pr-lg-4">
@@ -699,17 +687,114 @@
 								</div>
 								<label>Email Address *</label>
 								<input type="text" class="form-control" name="email-address" required="" />
-								<div class="form-checkbox mb-0">
-									<input type="checkbox" class="custom-checkbox" id="create-account"
-										name="create-account">
-									<label class="form-control-label ls-s" for="create-account">Create an account?</label>
+
+								
+								<div class="card accordion">
+									<div class="alert alert-light alert-primary alert-icon mb-4 card-header">
+										<i class="fas fa-exclamation-circle"></i>
+								
+										<a href="#alert-body1" class="text-primary collapse">Ship to a different address?</a>
+										<div class="alert-body collapsed" id="alert-body1">
+											
+
+
+
+
+
+
+
+											
+
+
+
+											<div class="col-lg-12 mb-6 mb-lg-0 pr-lg-4">
+												<h3 class="title title-simple text-left text-uppercase mt-2">Shipping Details</h3>
+												<div class="row">
+													<div class="col-xs-6">
+														<label class="mt-2">First Name *</label>
+														<input type="text" class="form-control" name="first-name" required="" />
+													</div>
+													<div class="col-xs-6">
+														<label class="mt-2">Last Name *</label>
+														<input type="text" class="form-control" name="last-name" required="" />
+													</div>
+												</div>
+												<label class="mt-2">Company Name (Optional)</label>
+												<input type="text" class="form-control" name="company-name" required="" />
+												<label class="mt-2">Country / Region *</label>
+												<div class="select-box mt-2">
+													<select name="country" class="form-control">
+														<option value="us" selected>United States (US)</option>
+														<option value="uk"> United Kingdom</option>
+														<option value="fr">France</option>
+														<option value="aus">Austria</option>
+													</select>
+												</div>
+												<label class="mt-2">Street Address *</label>
+												<input type="text" class="form-control" name="address1" required="" placeholder="House number and street name" />
+												<input type="text" class="form-control" name="address2" required=""
+													placeholder="Apartment, suite, unit, etc. (optional)" />
+												<div class="row">
+													<div class="col-xs-6">
+														<label class="mt-2">Town / City *</label>
+														<input type="text" class="form-control" name="city" required="" />
+													</div>
+													<div class="col-xs-6">
+														<label class="mt-2">State *</label>
+														<input type="text" class="form-control" name="state" required="" />
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-6">
+														<label class="mt-2">ZIP *</label>
+														<input type="text" class="form-control" name="zip" required="" />
+													</div>
+													<div class="col-xs-6">
+														<label class="mt-2">Phone *</label>
+														<input type="text" class="form-control" name="phone" required="" />
+													</div>
+												</div>
+												<label class="mt-2">Email Address *</label>
+												<input type="text" class="form-control" name="email-address" required="" />
+											</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</div>
+									</div>
 								</div>
-								<div class="form-checkbox mb-6">
-									<input type="checkbox" class="custom-checkbox" id="different-address"
-										name="different-address">
-									<label class="form-control-label ls-s" for="different-address">Ship to a different
-										address?</label>
-								</div>
+
+
+
 								<h2 class="title title-simple text-uppercase text-left">Additional Information</h2>
 								<label>Order Notes (Optional)</label>
 								<textarea class="form-control pb-2 pt-2 mb-0" cols="30" rows="5"
@@ -737,6 +822,15 @@
 															class="product-quantity">×&nbsp;1</span></td>
 													<td class="product-total text-body">$180.00</td>
 												</tr>
+												<tr>
+													<td class="product-name">Tax </td>
+													<td class="product-total text-body">$60</td>
+												</tr>
+												<tr>
+													<td class="product-name">Shipping Cost </td>
+													<td class="product-total text-body">$60</td>
+												</tr>
+												
 												<tr class="summary-subtotal">
 													<td>
 														<h4 class="summary-subtitle">Subtotal</h4>
@@ -744,40 +838,7 @@
 													<td class="summary-subtotal-price pb-0 pt-0">$290.00
 													</td>
 												</tr>
-												<tr class="sumnary-shipping shipping-row-last">
-													<td colspan="2">
-														<h4 class="summary-subtitle">Calculate Shipping</h4>
-														<ul>
-															<li>
-																<div class="custom-radio">
-																	<input type="radio" id="flat_rate"
-																		name="shipping" class="custom-control-input" checked>
-																	<label class="custom-control-label"
-																		for="flat_rate">Flat rate</label>
-																</div>
-															</li>
-
-															<li>
-																<div class="custom-radio">
-																	<input type="radio" id="free-shipping"
-																		name="shipping" class="custom-control-input">
-																	<label class="custom-control-label"
-																		for="free-shipping">Free
-																		shipping</label>
-																</div>
-															</li>
-															
-															<li>
-																<div class="custom-radio">
-																	<input type="radio" id="local_pickup"
-																		name="shipping" class="custom-control-input">
-																	<label class="custom-control-label"
-																		for="local_pickup">Local pickup</label>
-																</div>
-															</li>
-														</ul>
-													</td>
-												</tr>
+											
 												<tr class="summary-total">
 													<td class="pb-0">
 														<h4 class="summary-subtitle">Total</h4>
@@ -830,163 +891,101 @@
 			</div>
 		</main>
 		<!-- End Main -->
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-top">
-					<div class="row align-items-center">
-						<div class="col-lg-3">
-							<a href="demo1.html" class="logo-footer">
-								<img src="images/logo-footer.png" alt="logo-footer" width="154" height="43" />
-							</a>
-							<!-- End FooterLogo -->
-						</div>
-						<div class="col-lg-9">
-							<div class="widget widget-newsletter form-wrapper form-wrapper-inline">
-								<div class="newsletter-info mx-auto mr-lg-2 ml-lg-4">
-									<h4 class="widget-title">Subscribe to our Newsletter</h4>
-									<p>Get all the latest information, Sales and Offers.</p>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer-middle">
+						<div class="row">
+							<div class="col-lg-4 col-md-4">
+								<div class="widget widget-about">
+									<a href="demo24.html" class="logo-footer">
+										<img src="images/demos/demo24/owlet-footer.PNG" alt="logo-footer" width="154" height="43" />
+									</a>
+									<div class="widget-contact-info widget-collapsible">
+										<ul class="contact-info">
+											<li class="info phone"><label>PHONE:</label><a href="tel:#" target="_blank">Toll
+													Free (123) 456-7890</a></li>
+											<li class="info email"><label>EMAIL:</label><a href="mailto:riode@mail.com"
+													target="_blank">riode@mail.com</a></li>
+											<li class="info addr"><label>ADDRESS:</label><a href="#">123 Street, City,
+													Country</a></li>
+											<li class="info work"><label>WORKING DAYS / HOURS:</label><a href="#">Mon - Sun
+													/ 9:00 AM -
+													8:00 PM</a></li>
+										</ul>
+									</div>
 								</div>
-								<form action="#" class="input-wrapper input-wrapper-inline">
-									<input type="email" class="form-control" name="email" id="email"
-										placeholder="Email address here..." required />
-									<button class="btn btn-primary btn-rounded btn-md ml-2" type="submit">subscribe<i
-											class="d-icon-arrow-right"></i></button>
-								</form>
+								<!-- End Widget -->
 							</div>
-							<!-- End Newsletter -->
+							<div class="col-lg-4 col-md-4">
+								<div class="widget widget-info">
+									<h4 class="widget-title">About Us</h4>
+									<ul class="widget-body">
+										<li>
+											<a href="about-us.html">About Us</a>
+										</li>
+										<li>
+											<a href="#">Order History</a>
+										</li>
+										<li>
+											<a href="#">Returns</a>
+										</li>
+										<li>
+											<a href="#">Custom Service</a>
+										</li>
+										<li>
+											<a href="#">Terms &amp; Condition</a>
+										</li>
+									</ul>
+								</div>
+								<!-- End Widget -->
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<div class="widget widget-service">
+									<h4 class="widget-title">Customer Service</h4>
+									<ul class="widget-body">
+										<li>
+											<a href="#">Payment Methods</a>
+										</li>
+										<li>
+											<a href="#">Money-back Guarantee!</a>
+										</li>
+										<li>
+											<a href="#">Returns</a>
+										</li>
+										<li>
+											<a href="#">Custom Service</a>
+										</li>
+										<li>
+											<a href="#">Terms &amp; Conditions</a>
+										</li>
+									</ul>
+								</div>
+								<!-- End Widget -->
+							</div>
+			
 						</div>
 					</div>
+					<!-- End FooterMiddle -->
+					<div class="footer-bottom">
+						<div class="footer-left">
+							<figure class="payment">
+								<img src="images/payment.png" alt="payment" width="159" height="29" />
+							</figure>
+						</div>
+						<div class="footer-center">
+							<p class="copyright">Riode eCommerce &copy; 2021. All Rights Reserved</p>
+						</div>
+						<div class="footer-right">
+							<div class="social-links">
+								<a href="#" class="social-link social-facebook fab fa-facebook-f"></a>
+								<!-- <a href="#" class="social-link social-twitter fab fa-twitter"></a> -->
+								<a href="#" class="social-link social-linkedin fab fa-linkedin-in"></a>
+							</div>
+						</div>
+					</div>
+					<!-- End FooterBottom -->
 				</div>
-				<!-- End FooterTop -->
-				<div class="footer-middle">
-					<div class="row">
-						<div class="col-lg-3 col-md-6">
-							<div class="widget widget-info">
-								<h4 class="widget-title">Contact Info</h4>
-								<ul class="widget-body">
-									<li>
-										<label>Phone:</label>
-										<a href="tel:#">Toll Free (123) 456-7890</a>
-									</li>
-									<li>
-										<label>Email:</label>
-										<a href="mailto:mail@riode.com">mail@riode.com</a>
-									</li>
-									<li>
-										<label>Address:</label>
-										<a href="#">123 Street Name, City, England</a>
-									</li>
-									<li>
-										<label>WORKING DAYS / HOURS:</label>
-									</li>
-									<li>
-										<a href="#">Mon - Sun / 9:00 AM - 8:00 PM</a>
-									</li>
-								</ul>
-							</div>
-							<!-- End Widget -->
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="widget ml-lg-4">
-								<h4 class="widget-title">My Account</h4>
-								<ul class="widget-body">
-									<li>
-										<a href="about-us.html">About Us</a>
-									</li>
-									<li>
-										<a href="#">Order History</a>
-									</li>
-									<li>
-										<a href="#">Returns</a>
-									</li>
-									<li>
-										<a href="#">Custom Service</a>
-									</li>
-									<li>
-										<a href="#">Terms &amp; Condition</a>
-									</li>
-								</ul>
-							</div>
-							<!-- End Widget -->
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="widget ml-lg-4">
-								<h4 class="widget-title">Contact Info</h4>
-								<ul class="widget-body">
-									<li>
-										<a href="#">Sign in</a>
-									</li>
-									<li>
-										<a href="cart.html">View Cart</a>
-									</li>
-									<li>
-										<a href="wishlist.html">My Wishlist</a>
-									</li>
-									<li>
-										<a href="#">Track My Order</a>
-									</li>
-									<li>
-										<a href="#">Help</a>
-									</li>
-								</ul>
-							</div>
-							<!-- End Widget -->
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="widget widget-instagram">
-								<h4 class="widget-title">Instagram</h4>
-								<figure class="widget-body row">
-									<div class="col-3">
-										<img src="images/instagram/01.jpg" alt="instagram 1" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/02.jpg" alt="instagram 2" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/03.jpg" alt="instagram 3" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/04.jpg" alt="instagram 4" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/05.jpg" alt="instagram 5" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/06.jpg" alt="instagram 6" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/07.jpg" alt="instagram 7" width="64" height="64" />
-									</div>
-									<div class="col-3">
-										<img src="images/instagram/08.jpg" alt="instagram 8" width="64" height="64" />
-									</div>
-								</figure>
-							</div>
-							<!-- End Instagram -->
-						</div>
-					</div>
-				</div>
-				<!-- End FooterMiddle -->
-				<div class="footer-bottom">
-					<div class="footer-left">
-						<figure class="payment">
-							<img src="images/payment.png" alt="payment" width="159" height="29" />
-						</figure>
-					</div>
-					<div class="footer-center">
-						<p class="copyright">Riode eCommerce &copy; 2021. All Rights Reserved</p>
-					</div>
-					<div class="footer-right">
-						<div class="social-links">
-							<a href="#" class="social-link social-facebook fab fa-facebook-f"></a>
-							<a href="#" class="social-link social-twitter fab fa-twitter"></a>
-							<a href="#" class="social-link social-linkedin fab fa-linkedin-in"></a>
-						</div>
-					</div>
-				</div>
-				<!-- End FooterBottom -->
-			</div>
-		</footer>
+			</footer>
 		<!-- End Footer -->
 	</div>
 	<!-- Sticky Footer -->
@@ -1191,7 +1190,7 @@
 	<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 	<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<!-- Main JS File -->
-	<script src="js/main.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

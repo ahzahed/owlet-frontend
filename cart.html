@@ -37,6 +37,7 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="stylesheet" type="text/css" href="css/demo24.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 
 <body>
@@ -53,7 +54,7 @@
                         <div class="header-search hs-simple d-lg-show" style="max-width: 300px;">
                             <form action="#" class="input-wrapper">
                                 <input type="text" class="form-control" name="search" autocomplete="off" placeholder="Search..."
-                                    required />
+                                    required style="border-radius: 25px;"/>
                                 <button class="btn btn-search" type="submit">
                                     <i class="d-icon-search"></i>
                                 </button>
@@ -602,6 +603,7 @@
 										<th></th>
 										<th><span>Price</span></th>
 										<th><span>quantity</span></th>
+										<th>Tax</th>
 										<th>Subtotal</th>
 									</tr>
 								</thead>
@@ -621,7 +623,8 @@
 											</div>
 										</td>
 										<td class="product-subtotal">
-											<span class="amount">$129.99</span>
+											<span class="amount">$129.99</span><br>
+											<del><span class="amount">$259.99</span></del>
 										</td>
 										<td class="product-quantity">
 											<div class="input-group">
@@ -630,6 +633,9 @@
 													max="1000000">
 												<button class="quantity-plus d-icon-plus"></button>
 											</div>
+										</td>
+										<td class="product-price">
+											<span class="amount">1.5%</span>
 										</td>
 										<td class="product-price">
 											<span class="amount">$129.99</span>
@@ -666,6 +672,9 @@
 												<button class="quantity-plus d-icon-plus"></button>
 											</div>
 										</td>
+                                        <td class="product-price">
+                                            <span class="amount">1.5%</span>
+                                        </td>
 										<td class="product-price">
 											<span class="amount">$98.00</span>
 										</td>
@@ -684,7 +693,7 @@
 							<div class="cart-coupon-box mb-8">
 								<h4 class="title coupon-title text-uppercase ls-m">Coupon Discount</h4>
 								<input type="text" name="coupon_code" class="input-text form-control text-grey ls-m mb-4"
-									id="coupon_code" value="" placeholder="Enter coupon code here...">
+									id="coupon_code" value="" placeholder="Enter coupon or gift code here...">
 								<button type="submit" class="btn btn-md btn-dark btn-rounded btn-outline">Apply Coupon</button>
 							</div>
 						</div>
@@ -701,6 +710,33 @@
 												<p class="summary-subtotal-price">$426.99</p>
 											</td>												
 										</tr>
+                                        <tr class="sumnary-shipping shipping-row-last">
+                                            <td colspan="2">
+                                                <h4 class="summary-subtitle">Shipping Cost</h4>
+                                                <ul>
+                                                    <li>
+                                                        <div class="custom-radio">
+                                                            <input type="radio" id="flat_rate" name="shipping" class="custom-control-input" checked>
+                                                            <label class="custom-control-label" for="flat_rate">Inside Dhaka 60/-</label>
+                                                        </div>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <div class="custom-radio">
+                                                            <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
+                                                            <label class="custom-control-label" for="free-shipping">Outside Dhaka 120/-</label>
+                                                        </div>
+                                                    </li>
+                                        
+                                                    <li>
+                                                        <div class="custom-radio">
+                                                            <input type="radio" id="local_pickup" name="shipping" class="custom-control-input">
+                                                            <label class="custom-control-label" for="local_pickup">Free Shipping Local pickup</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
 									</table>
 									<table class="total">
 										<tr class="summary-subtotal">
@@ -708,7 +744,7 @@
 												<h4 class="summary-subtitle">Total</h4>
 											</td>
 											<td>
-												<p class="summary-total-price ls-s">$426.99</p>
+												<p class="summary-total-price ls-s">$486.99</p>
 											</td>												
 										</tr>
 									</table>
@@ -721,65 +757,34 @@
 			</div>
 		</main>
 		<!-- End Main -->
-		<footer class="footer">
+        <footer class="footer">
             <div class="container">
-                <div class="footer-top">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3">
-                            <a href="demo1.html" class="logo-footer">
-                                <img src="images/logo-footer.png" alt="logo-footer" width="154" height="43" />
-                            </a>
-                            <!-- End FooterLogo -->
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="widget widget-newsletter form-wrapper form-wrapper-inline">
-                                <div class="newsletter-info mx-auto mr-lg-2 ml-lg-4">
-                                    <h4 class="widget-title">Subscribe to our Newsletter</h4>
-                                    <p>Get all the latest information, Sales and Offers.</p>
-                                </div>
-                                <form action="#" class="input-wrapper input-wrapper-inline">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Email address here..." required />
-                                    <button class="btn btn-primary btn-rounded btn-md ml-2" type="submit">subscribe<i
-                                            class="d-icon-arrow-right"></i></button>
-                                </form>
-                            </div>
-                            <!-- End Newsletter -->
-                        </div>
-                    </div>
-                </div>
-                <!-- End FooterTop -->
                 <div class="footer-middle">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget widget-info">
-                                <h4 class="widget-title">Contact Info</h4>
-                                <ul class="widget-body">
-                                    <li>
-                                        <label>Phone:</label>
-                                        <a href="tel:#">Toll Free (123) 456-7890</a>
-                                    </li>
-                                    <li>
-                                        <label>Email:</label>
-                                        <a href="mailto:mail@riode.com">mail@riode.com</a>
-                                    </li>
-                                    <li>
-                                        <label>Address:</label>
-                                        <a href="#">123 Street Name, City, England</a>
-                                    </li>
-                                    <li>
-                                        <label>WORKING DAYS / HOURS:</label>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mon - Sun / 9:00 AM - 8:00 PM</a>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="widget widget-about">
+                                <a href="demo24.html" class="logo-footer">
+                                    <img src="images/demos/demo24/owlet-footer.PNG" alt="logo-footer" width="154" height="43" />
+                                </a>
+                                <div class="widget-contact-info widget-collapsible">
+                                    <ul class="contact-info">
+                                        <li class="info phone"><label>PHONE:</label><a href="tel:#" target="_blank">Toll
+                                                Free (123) 456-7890</a></li>
+                                        <li class="info email"><label>EMAIL:</label><a href="mailto:riode@mail.com"
+                                                target="_blank">riode@mail.com</a></li>
+                                        <li class="info addr"><label>ADDRESS:</label><a href="#">123 Street, City,
+                                                Country</a></li>
+                                        <li class="info work"><label>WORKING DAYS / HOURS:</label><a href="#">Mon - Sun
+                                                / 9:00 AM -
+                                                8:00 PM</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <!-- End Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget ml-lg-4">
-                                <h4 class="widget-title">My Account</h4>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="widget widget-info">
+                                <h4 class="widget-title">About Us</h4>
                                 <ul class="widget-body">
                                     <li>
                                         <a href="about-us.html">About Us</a>
@@ -800,61 +805,30 @@
                             </div>
                             <!-- End Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget ml-lg-4">
-                                <h4 class="widget-title">Contact Info</h4>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="widget widget-service">
+                                <h4 class="widget-title">Customer Service</h4>
                                 <ul class="widget-body">
                                     <li>
-                                        <a href="#">Sign in</a>
+                                        <a href="#">Payment Methods</a>
                                     </li>
                                     <li>
-                                        <a href="cart.html">View Cart</a>
+                                        <a href="#">Money-back Guarantee!</a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html">My Wishlist</a>
+                                        <a href="#">Returns</a>
                                     </li>
                                     <li>
-                                        <a href="#">Track My Order</a>
+                                        <a href="#">Custom Service</a>
                                     </li>
                                     <li>
-                                        <a href="#">Help</a>
+                                        <a href="#">Terms &amp; Conditions</a>
                                     </li>
                                 </ul>
                             </div>
                             <!-- End Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget widget-instagram">
-                                <h4 class="widget-title">Instagram</h4>
-                                <figure class="widget-body row">
-                                    <div class="col-3">
-                                        <img src="images/instagram/01.jpg" alt="instagram 1" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/02.jpg" alt="instagram 2" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/03.jpg" alt="instagram 3" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/04.jpg" alt="instagram 4" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/05.jpg" alt="instagram 5" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/06.jpg" alt="instagram 6" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/07.jpg" alt="instagram 7" width="64" height="64" />
-                                    </div>
-                                    <div class="col-3">
-                                        <img src="images/instagram/08.jpg" alt="instagram 8" width="64" height="64" />
-                                    </div>
-                                </figure>
-                            </div>
-                            <!-- End Instagram -->
-                        </div>
+        
                     </div>
                 </div>
                 <!-- End FooterMiddle -->
@@ -870,7 +844,7 @@
                     <div class="footer-right">
                         <div class="social-links">
                             <a href="#" class="social-link social-facebook fab fa-facebook-f"></a>
-                            <a href="#" class="social-link social-twitter fab fa-twitter"></a>
+                            <!-- <a href="#" class="social-link social-twitter fab fa-twitter"></a> -->
                             <a href="#" class="social-link social-linkedin fab fa-linkedin-in"></a>
                         </div>
                     </div>
@@ -1081,7 +1055,7 @@
     <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Main JS File -->
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
