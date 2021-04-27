@@ -36,7 +36,9 @@
     <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.min.css">
 
     <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="stylesheet" type="text/css" href="css/demo24.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 
 <body>
@@ -44,6 +46,14 @@
     <div class="page-wrapper">
         <h1 class="d-none">Riode - Responsive eCommerce HTML Template</h1>
         <header class="header">
+            <div class="text-center" style="background-color: #f9b96a;">
+                <div class="container alert alert-dark border-no font-primary font-weight-semi-bold text-dark justify-content-center pl-10 pr-8">
+                    Get Up to 40% OFF in this summer
+                    <button type="button" class="btn btn-link btn-close">
+                        <i class="d-icon-times"></i>
+                    </button>
+                </div>
+            </div>
             <div class="header-middle has-center">
                 <div class="container">
                     <div class="header-left">
@@ -55,7 +65,7 @@
                         <div class="header-search hs-simple d-lg-show" style="max-width: 300px;">
                             <form action="#" class="input-wrapper">
                                 <input type="text" class="form-control" name="search" autocomplete="off"
-                                    placeholder="Search..." required />
+                                    placeholder="Search..." required style="border-radius: 25px;" />
                                 <button class="btn btn-search" type="submit">
                                     <i class="d-icon-search"></i>
                                 </button>
@@ -661,25 +671,11 @@
         <main class="main home">
             <div class="page-content">
                 <div class="container">
-                    <section class="intro-section pb-6">
+                    <section class="intro-section pb-6" style="border-bottom: none;">
                         <div class="row">
                             <div class="col-lg-12 mb-4">
-                                <div class="intro-banner banner banner-fixed overlay-zoom overlay-dark appear-animate"
-                                    data-animation-options="{'name': 'fadeInLeftShorter', 'delay': '.1s'}"
-                                    style="background-color: #e9e8ed">
-                                    <figure>
-                                        <img src="images/baby/g.jpg" alt="banner" style="width: 100%; height: 528px;" />
-                                    </figure>
-                                    <!-- <div class="banner-content text-center x-50 w-100">
-                                        <div class="appear-animate" data-animation-options="{'name': 'zoomIn', 'delay': '.6s'}">
-                                            <h4 class="banner-subtitle mb-2 text-uppercase font-weight-normal">New
-                                                Collection</h4>
-                                            <h3 class="banner-title text-uppercase font-weight-bold">Buy 2, Get 1
-                                                Free* on everything</h3>
-                                            <p class="font-primary ls-m mb-0">Must add 3 products to
-                                                cart.<br />Terms apply</p>
-                                        </div>
-                                    </div> -->
+                                <div class="custom-banner">
+                                        <img src="images/baby/g.jpg" alt="banner" />
                                 </div>
                             </div>
                         </div>
@@ -1317,6 +1313,9 @@
         </footer>
         <!-- End Footer -->
     </div>
+
+
+
     <!-- Sticky Footer -->
     <div class="sticky-footer sticky-content fix-bottom">
         <a href="demo24.html" class="sticky-link active">
@@ -1351,6 +1350,11 @@
     </div>
     <!-- Scroll Top -->
     <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+
+
+
+
+
 
     <!-- MobileMenu -->
     <div class="mobile-menu-wrapper">

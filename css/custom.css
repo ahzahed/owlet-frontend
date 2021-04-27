@@ -1,0 +1,24 @@
+.custom-banner img{
+ width: 100%; 
+ height: 500px;
+}
+@media screen and (max-width: 1200px) {
+  .custom-banner img{
+    height: 450px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .custom-banner img{
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom-banner img{
+    height: 300px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .custom-banner img{
+    height: 200px;
+  }
+}
