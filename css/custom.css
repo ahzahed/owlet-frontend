@@ -11,18 +11,15 @@
   .custom-banner img{
     height: 350px;
   }
-  .logo img{
-   height: 72px;
-   width: 80%;
-  }
+
 }
 @media screen and (max-width: 768px) {
   .custom-banner img{
     height: 300px;
   }
   .logo img{
-   height: 72px;
-   width: 80%;
+   height: 53px;
+   /* width: 1600; */
   }
 }
 @media screen and (max-width: 576px) {
