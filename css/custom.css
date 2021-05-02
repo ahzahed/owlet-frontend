@@ -94,6 +94,22 @@ background-color: #F2F2F2;
   color: #222;
 }
 
+.sticky-footer .home{
+  color: #f26b3c;
+}
+.sticky-footer .category{
+  color: red;
+}
+.sticky-footer .wishlist{
+  color: green;
+}
+.sticky-footer .account{
+  color: rgb(201, 59, 102);
+}
+.sticky-footer .search{
+  color: rgb(28, 138, 114);
+}
+
 .scroll-top{
   color: rgb(228 113 83);
   bottom: 100px;
